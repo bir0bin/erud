@@ -1,42 +1,11 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//RU">
-<HTML>
-<HEAD>
-  <LINK rel=stylesheet href="../../../Оболочка/css/style.css" type=text/css>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="my_style.css">
   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
-  <META HTTP-EQUIV="Content-Language" CONTENT="ru">
   <title>Теория по дисциплине "Высшая матемaтика"</title>
   <base target="_top">
   <style>
-		body {
-			font-family: "Times New Roman", "Times", serif;
-			letter-spacing: 0 !important;
-			font-size: 14pt;
-		}
-		h1 {
-			font-size: 16pt;
-		}
-		h2 {
-			font-size: 15pt;
-		}
-		h3 {
-			font-size: 16pt;
-		}
-		h4 {
-			margin: 5;
-		}
-		h1, h2, h3, h4 {
-			text-align: center;
-		}
-		p {
-			text-indent: 35.5pt;
-			margin: 5px;
-		}
-    em {
-      font-family: "Times New Roman", "Times", serif;
-      font-style: italic;
-      font-size: 14pt;
-      color: black;
-    }
     img.ris {
       display: block;
       margin-left: auto;
@@ -67,7 +36,11 @@
 	</style>
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
-      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+		tex2jax: {
+		inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		processEscapes: true,
+		mtextFontInherit: true 
+		}
     });
     MathJax.Hub.Config({
       TeX: {
@@ -81,12 +54,12 @@
       }
     });
   </script>
-  <script type="text/javascript" async src="../../../mathjax/MathJax.js?config=TeX-AMS_CHTML"></script>
-</HEAD>
-<BODY>
+  <script type="text/javascript" src="../../../Оболочка/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
 <table width="100%" border="0" cellpadding="0" cellspacing="3" background="../../../Оболочка/images/background.jpg">
   <tr> 
-    <td width="13%" rowspan=3 align="center" ><img src="../../../Оболочка/images/logo_new.jpg" width=117 align="middle"></td>
+    <td width="13%" rowspan=3 align="center" ><img src="../../../Оболочка/images/logo_new.png" width=117 align="middle"></td>
   <tr> 
      <td width="70%" colspan=2 align="center" valign="middle"> <H1 align="center" >электронный
          ресурс по учебной дисциплине<BR>
@@ -103,8 +76,8 @@
 </CENTER>
 </FONT>
 
-<div class="WordSection1 style1" style="width: 900px; margin: 0 auto">
-<h1>Тема 6. Прямая и плоскость в пространстве</h1>
+<div class = "page">
+		<h1>Тема 6. Прямая и плоскость в пространстве</h1>
 <h2>§6.1. Уравнение поверхности в пространстве. Уравнение плоскости по заданным 
 точке и нормальному вектору. Общее уравнение плоскости</h2>
 
@@ -281,11 +254,384 @@ $$ d=\left|x_0\cos\varalpha+y_0\cos\varbeta+z_0\cos\vargamma-p\right|, $$
 $$ d=\frac{\left|Ax_0+By_0+Cz_0+D\right|}{\sqrt{A^2+B^2+C^2}}. $$</p>
 
 <img class="ris" src="../../images/lk6/6/6.49.png" height="205px"/>
-<p>&nbsp;</p>
-<table width="100%" height=25px border="0" cellpadding="0" cellspacing="3" bordercolor="#316AC5" background="../../../Оболочка/images/background.jpg">
-  <tr >
-  <td align=center><var><b>(С)  БГУИР</b></var></td>
-  </tr>
-</table>
-</BODY>
-</HTML>
+
+		<h2 align = "center">§6.5. Различные типы уравнений прямой в пространстве. <br> Угол между прямыми в постранстве</h2>
+		 <p id = "direction_vector">
+			Положение прямой в пространстве полностью определяется заданием какой-либо точки на прямой и направляющего вектора прямой. 
+		    (Напомним, что <a href = "smth.html" class = "green">направляющим</a> называется любой ненулевой вектор, параллельный прямой.) 
+			Рассмотрим прямую <i>L</i>, на которой дана точка $M_{0}(x_{0}, y_{0}, z_{0})$
+		    и для которой известен направляющий вектор  $\overrightarrow{S} = (m,n,p)$.
+		</p>
+        <p>
+		   Пусть $M(x,y,z)$ – любая точка пространства. Очевидно, что $M \in L$ тогда и только тогда, когда вектор 
+		   $\overrightarrow{M_{0}M}$  <a href = "smth.html" class = "green">коллинеарен</a> вектору $\overrightarrow{S}$ , 
+		   т. е. когда $\overrightarrow{M_{0}M} = t\overrightarrow{S}$ , где $t$ – скалярный множитель, называемый параметром. 
+		   Он может принимать любое действительное значение 
+		   в зависимости от положения точки $M$ на прямой $L$.</p>
+		<p>
+			Таким образом, т. к.  $\overrightarrow{M_{0}M} = (x – x_{0}, y – y_{0}, z – z_{0})$, 
+			из векторного равенства $\overrightarrow{M_{0}M} = t\overrightarrow{S}$ получаем систему уравнений 
+			относительно координат точки $M(x,y,z)$: 
+		</p>
+		
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center>
+		<tr>
+			<td width="100%" rowspan=2 align="center">
+			$
+				\begin{cases}x - x_{0}  = tm\\y - y_{0}  = tn\\z - z_{0}  = tp\end{cases} \
+			$
+			</td>
+		</tr>
+		</table>
+		<p class = "p_continue">или</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center id = "6.5">
+		<tr>
+			<td width="5%">
+			</td>
+			<td width="90%" rowspan=2 align="center">
+			$
+			\begin{cases}
+				x = x_{0} + tm\\y = y_{0} + tn\\z = z_{0} + tp .
+			\end{cases}
+			$
+			</td>
+			<td align="right">
+			$(6.5)$
+			</td>
+		</tr>
+		</table>
+
+		<p>
+			Это <i>параметрические уравнения прямой</i>. При изменении параметра $t$ 
+			изменяются координаты $x,y,z$ и точка $M(x,y,z)$ перемещается по прямой $L$. 
+		</p>
+		<p>
+			Используя радиус-векторы  $\overrightarrow{r} = \overrightarrow{OM}$ и
+			$\overrightarrow{r_{0}} = \overrightarrow{OM_{0}}$ 
+		    точек $M$ и $M_{0}$ , систему уравнений (6.5) можно записать в виде 
+			<i>векторного уравнения прямой</i>
+		</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center>
+		<tr>
+			<td width="100%" rowspan=2 align="center">
+			$
+				\overrightarrow{r} = \overrightarrow{r_{0}} + t\overrightarrow{S} .
+			$
+			</td>
+		</tr>
+		</table>
+
+		<p>Из системы (6.5) можно выразить параметр $t$ следующим образом:</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center>
+		<tr>
+			<td width="100%" rowspan=2 align="center">	
+				$
+					t = \dfrac{x - x_{0}}{m} = \dfrac{y - y_{0}}{n} = \dfrac{z - z_{0}}{k} .
+				$
+			</td>
+		</tr>
+		</table>
+		<p>Поэтому систему уравнений (6.5) часто записывают в виде</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center id = "6.6">
+		<tr>
+			<td width="5%">
+			</td>
+			<td width="90%" rowspan=2 align="center">
+				$
+					\dfrac{x - x_{0}}{m} = \dfrac{y - y_{0}}{n} = \dfrac{z - z_{0}}{p}.
+				$
+			</td>
+			<td align="right">
+			$(6.6)$
+			</td>
+		</tr>
+		</table>		
+		<p>
+			Систему уравнений (6.6) называют каноническими уравнениями прямой. Отметим, что система (6.6) – только другая форма записи системы (6.5).
+			Например,
+		</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center>
+		<tr>
+			<td width="100%" rowspan=2 align="center">
+				$
+					\dfrac{x - 1}{0} = \dfrac{y - 1}{0} = \dfrac{z}{1} \Leftrightarrow 
+					\begin{cases} 
+						x = 1\\ 
+						y = 2\\ 
+						z = t . 
+					\end{cases}
+				$
+			</td>
+		</tr>
+		</table>
+		<p>
+			Чтобы перейти от канонических уравнений прямой к ее <a href = "#6.5" class = "blue">параметрическим уравнениям</a>, 
+			надо все части равенства (6.6) приравнять к $t$ и выразить $x, y, z$ через $t$.
+		</p>
+		<p>
+			Пусть теперь прямая $L$ задана как пересечение двух непараллельных плоскостей, т. е. системой линейных уравнений
+		</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center>
+		<tr>
+			<td width="5%">
+			</td>
+			<td width="90%" rowspan=2 align="center">
+			$
+			\begin{cases}
+				A_{1}x + B_{1}y + C_{1}z + D_{1} = 0\\ 
+				A_{2}x + B_{2}y + C_{2}z + D_{2} = 0 .
+			\end{cases}
+			$
+			</td>
+			<td align="right">
+			$(6.7)$
+			</td>
+		</tr>
+		</table>		
+		<p>Систему (6.7) иногда называют <i>общими уравнениями прямой</i>.</p>
+		<p>Как перейти от общих уравнений прямой L к ее каноническим уравнениям?</p>
+		<p>
+			1. Найдем точку $M_{0} \in L$. Для этого придадим произвольное значение (например, 0) одной из координат и 
+			решим систему (6.7) относительно двух оставшихся координат.
+		</p>
+		<p>
+			2. Найдем <a href = "#direction_vector" class = "blue">направляющий вектор</a> $\overrightarrow{S}$  прямой $L$. 
+			Так как прямая перпендикулярна <!-- ССЫЛКА НА ПУНКТ 6.1--> <a href = "smth.html" class = "green">нормальным векторам</a>  $\overrightarrow{n_{1}} = (A_{1}, B_{1}, C_{1})$ 
+			и  $\overrightarrow{n_{2}} = (A_{2}, B_{2}, C_{2})$, то за направляющий вектор   можно принять <a href = "smth.html" class = "green">векторное произведение</a>
+			$n_{1} \times n_{2}$ , т. е.
+		</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center>
+		<tr>
+			<td width="100%" rowspan=2 align="center">
+			$
+			\overrightarrow{S}= \overrightarrow{n_{1}}\times\overrightarrow{n_{2}}=
+			\begin{vmatrix}
+				\overrightarrow{i} & \overrightarrow{j} & \overrightarrow{k} \\
+				A_{1} & B_{1} & C_{1} \\
+				A_{2} & B_{2} & C_{2}
+			\end{vmatrix} .
+			$
+			</td>
+		</tr>
+		</table>
+		<p>Пример 2. Пусть прямая $L$ задана общими уравнениями</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center>
+		<tr>
+			<td width="100%" rowspan=2 align="center">
+			$
+			\begin{cases}
+				x + y - 2z - 5 = 0\\
+				x - y + 3z - 1= 0. 
+			\end{cases}
+			$
+			</td>
+		</tr>
+		</table>
+		<p>Полагая $z = 0$ , получаем систему линейных уравнений относительно $x$ и $y$</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center>
+		<tr>
+			<td width="100%" rowspan=2 align="center">
+			$
+			\begin{cases}
+				x + y = 5\\
+				x - y = 1
+			\end{cases} \Rightarrow
+			\begin{cases}
+				x = 3\\
+				y = 2 .
+			\end{cases}
+			$
+			</td>
+		</tr>
+		</table>
+
+		<p>То есть  $M_{0}(3,2,0) \in L $. Найдем направляющий вектор прямой $L$:</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center>
+		<tr>
+			<td width="100%" rowspan=2 align="center">
+			$
+			\overrightarrow{S} =
+			\begin{vmatrix}
+				\overrightarrow{i} & \overrightarrow{j} & \overrightarrow{k} \\
+				1 & 1 & -2\\
+				1 & -1 & 3
+			\end{vmatrix} = 
+			\overrightarrow{i} -5\overrightarrow{j} - 2\overrightarrow{k} ,
+			$
+			</td>
+		</tr>
+		</table>
+		<p>т. е. $m = 1, n = – 5, p = – 2$. Отсюда канонические уравнения прямой $L$ имеют вид</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center>
+		<tr>
+			<td width="100%" rowspan=2 align="center">
+				$
+					\dfrac{x-3}{1} = \dfrac{y-2}{-5} = \dfrac{z}{-2} .
+				$
+			</td>
+		</tr>
+		</table>
+		<p>
+			Пусть прямая $L$ проходит через две точки $M_{0}(x_{0}, y_{0}, z_{0})$  и  $M_{1}(x_{1}, y_{1}, z_{1})$. 
+			Тогда за <a href = "#direction_vector" class = "blue">направляющий вектор</a> прямой можно принять вектор
+			$\overrightarrow{S} = \overrightarrow{M_{0}M_{1}} = (x_{1} – x_{0}, y_{1} – y_{0}, z_{1} – z_{0})$ и 
+			<a href = "#6.6" class = "blue">канонические уравнения</a> прямой $L$ будут иметь вид
+		</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center>
+		<tr>
+			<td width="100%" rowspan=2 align="center">
+				$
+					\dfrac{x - x_{0}}{x_{1} - x_{0}} = \dfrac{y - y_{0}}{y_{1} - y_{0}} = \dfrac{z - z_{0}}{z_{1} - z_{0}} .
+				$
+			</td>
+		</tr>
+		</table>
+		<p>
+			Пусть даны две прямые $L_{1}$ и $L_{2}$ с <a href = "#direction_vector" class = "blue">направляющими векторами</a>  
+			$\overrightarrow{S_{1}} = (m_{1}, n_{1}, p_{1})$  и $\overrightarrow{S_{2}} = (m_{2}, n_{2}, p_{2})$ соответственно. 
+			Один из смежных углов между прямыми совпадает с <a href = "smth.html" class = "green">углом</a> $\tt &phi; $  между направляющими векторами. Тогда
+		</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center>
+		<tr>
+			<td width="100%" rowspan=2 align="center">
+				cos &phi;
+				$
+					=
+					\dfrac{\overrightarrow{S_{1}}\overrightarrow{S_{2}}}{\left| \overrightarrow{S_{1}}\right| \left| \overrightarrow{S_{2}} \right|} =
+					\dfrac{m_{1}m_{2} + n_{1}n_{2} + p_{1}p_{2}}{\sqrt{m_{1}^{2} + n_{1}^{2} + p_{1}^{2}}{\sqrt{m_{2}^{2} + n_{2}^{2} + p_{2}^{2}}} } .
+				$
+			</td>
+		</tr>
+		</table>
+		<p>
+			Условие параллельности прямых равносильно <a href = "smth.html" class = "green">условию коллинеарности 
+			векторов</a> $\overrightarrow{S_{1}}$ и $\overrightarrow{S_{2}}$, т. е.
+			$\dfrac{m_{1}}{m_{2}} = \dfrac{n_{1}}{n_{2}} = \dfrac{p_{1}}{p_{2}}$ – <a href = "smth.html" class = "green">компоненты векторов</a> пропорциональны.
+		</p>
+		<p>
+			Условие перпендикулярности прямых равносильно <a href = "smth.html" class = "green">условию ортогональности 
+			векторов</a> $\overrightarrow{S_{1}}$ и $\overrightarrow{S_{2}}$,
+			т. е. имеет вид $m_{1}m_{2} + n_{1}n_{2} + p_{1}p_{2} = 0$.
+		</p>
+		<h2 align = "center">§6.6. Взаимное расположение прямых, прямой и плоскости в пространстве</h2>
+		<p>
+			Две прямые в пространстве могут: а) пересекаться, б) быть параллельными, в) скрещиваться. В первых двух случаях прямые лежат в одной плоскости.
+		</p>
+		<p>Пусть известны канонические уравнения прямых $L_{1}$ и $L_{2}$:</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center>
+		<tr>
+			<td width="100%" rowspan=2 align="center">
+			$
+				\dfrac{x - x_{1}}{m_{1}} = \dfrac{y - y_{1}}{n_{1}} = \dfrac{z - z_{1}}{p_{1}} , 
+				\dfrac{x - x_{2}}{m_{2}} = \dfrac{y - y_{2}}{n_{2}} = \dfrac{z - z_{2}}{p_{2}} .
+			$
+			</td>
+		</tr>
+		</table>
+
+		<p id = "68">
+			Очевидно, для того чтобы прямые $L_{1}$ и $L_{2}$ лежали в одной плоскости, необходимо и достаточно, чтобы векторы
+			$\overrightarrow{S_{1}} = (m_{1}, n_{1}, p_{1}), \ \overrightarrow{S_{2}} = (m_{2}, n_{2}, p_{2})$ 
+			и $\overrightarrow{M_{1}M_{2}} = (x_{2} - x_{1}, y_{2} - y_{1}, z_{2} - z_{1})$ были <a href = "smth.html" class = "green">компланарны</a>. 
+			Последнее условие равносильно равенству нулю их <a href = "smth.html" class = "green">смешанного произведения</a>. То есть
+		</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center>
+		<tr>
+			<td width="100%" rowspan=2 align="center">
+			$
+			\begin{vmatrix}
+				x_{2} - x_{1} & y_{2} - y_{1} & z_{2} - z_{1}\\
+				m_{1} & n_{1} & p_{1}\\
+				m_{1} & n_{1} & p_{1}
+			\end{vmatrix} = 0 .
+			$
+			</td>
+		</tr>
+		</table>
+		<p>Рассмотрим плоскость <i>П</i>, заданную общим уравнением</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center>
+		<tr>
+			<td width="100%" rowspan=2 align="center">
+			$
+				Ax + By + Cz + D = 0 ,
+			$
+			</td>
+		</tr>
+		</table>
+		<p class = "p_continue">и прямую $L$, заданную каноническими уравнениями</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center>
+		<tr>
+			<td width="100%" rowspan=2 align="center">
+				$
+					\dfrac{x - x_{0}}{m} = \dfrac{y - y_{0}}{n} = \dfrac{z - z_{0}}{p} .
+				$
+			</td>
+		</tr>
+		</table>
+		<p>
+			Так как угол &phi;  между прямой $L$ и плоскостью <i>П</i> является дополнительным 
+			до $\dfrac{ \texttt{&pi;}}{2}$  к <a href = "smth.html" class = "green">углу</a> $ \texttt{&gamma;}$ 	  между векторами
+			$\overrightarrow{S} = (m,n,p)$ и  $\overrightarrow{n} = (A,B,C)$ (рис. 6.3), то
+		</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center id = "6.8">
+		<tr>
+			<td width="5%">
+			</td>
+			<td width="90%" rowspan=2 align="center">
+				$ 
+					\sin \texttt{&phi;} = \cos \texttt{&gamma;} =
+					\dfrac{\overrightarrow{n}\overrightarrow{S}}{\left| \overrightarrow{n} \right| \left| \overrightarrow{S} \right| } = 
+					\dfrac{Am + Bn + Cp}{\sqrt{A^{2} + B^{2} + C^{2}}\sqrt{m^{2} + n^{2} + p^{2}}} .
+				$
+			</td>
+			<td align="right">
+			$(6.8)$
+			</td>
+		</tr>
+		</table>	
+		<div align = "center" alt = "Стройникова лучшая"><img src="../../images/lk6/6/gr1.png" ></div>
+		
+		<p>
+			Условие параллельности прямой $L$ и плоскости <i>П</i> получается из формулы <a href = "#6.8" class = "blue">(6.8)</a> при $ \texttt{&phi;} = 0$, т. е. имеет вид
+		</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center>
+		<tr>
+			<td width="100%" rowspan=2 align="center">
+			$
+				Am + Bn + Cp = 0 .
+			$
+			</td>
+		</tr>
+		</table>
+		<p>
+			Условие перпендикулярности прямой и плоскости равносильно <a href = "smth.html" class = "green">коллинеарности</a> <!-- ССЫЛКА НА ПУНКТ 6.1 --> <a href = "smth.html" class = "green">нормального вектора</a> плоскости 
+			и <a href = "#direction_vector" class = "blue">направляющего вектора</a> прямой, т. е. имеет вид
+		</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center>
+		<tr>
+			<td width="100%" rowspan=2 align="center">
+				$
+					\dfrac{A}{m} = \dfrac{B}{n} = \dfrac{C}{p} .
+				$
+			</td>
+		</tr>
+		</table>
+		<p>
+			Прямая $L$ будет лежать в заданной плоскости <i>П</i>, если $M_{0}(x_{0}, y_{0}, z_{0}) \in$ <i>П</i>  и <a href = "#direction_vector" class = "blue">направляющий вектор</a>
+			$\overrightarrow{S} = (m, n, p)$ прямой <a href = "smth.html" class = "green">перпендикулярен</a> <!-- ССЫЛКА НА ПУНКТ 6.1-->  <a href = "smth.html" class = "blue">нормальному вектору</a>
+			$\overrightarrow{n} = (A, B, C)$ плоскости, т. е. если выполнены условия
+		</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="3" align=center>
+		<tr>
+			<td width="100%" rowspan=2 align="center">
+			$
+			\begin{cases}
+				Ax_{0} + By_{0} + Cz_{0} + D = 0\\
+				Am + Bn + Cp = 0 .
+			\end{cases}
+			$
+			</td>
+		</tr>
+		</table>
+	</body>
+</html>
