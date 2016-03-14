@@ -2,12 +2,17 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//RU">
 <HTML>
 <HEAD>
+<style> 
+	p{text-indent:1.25cm;} 
+</style>
 <LINK rel=stylesheet href="../../../Оболочка/css/style.css" type=text/css>
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
 <META HTTP-EQUIV="Content-Language" CONTENT="ru">
 <title>Теория по дисциплине "Высшая матемaтика"</title>
 <base target="_top">
-</HEAD><BODY>
+<script type="text/javascript" src="../../../mathjax/MathJax.js?config=TeX-AMS_HTML"></script>
+</HEAD>
+<BODY>
 <table width="100%" border="0" cellpadding="0" cellspacing="3" background="../../../Оболочка/images/background.jpg">
   <tr> 
     <td width="13%" rowspan=3 align="center" ><img src="../../../Оболочка/images/logo_new.jpg" width=117 align="middle"></td>
@@ -265,58 +270,59 @@
 <p>Аналогично получим <img width=133 height=27 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img377.jpg">. Итак, <img width=41 height=23 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img378.jpg">.&diams;</p>
 <p>Отметим, что алгебраические свойства векторного произведения определяют правила действия при векторном умножении.</p>
 <p>&nbsp;</p>
-<h4>2.6. Векторное и смешанное произведение в декартовых координатах</h4>
+<h4 align="center">&sect;2.6. Векторное и смешанное произведение в декартовых координатах</h4>
 <p>
-    Пусть два вектора <img width=19 height=25 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img379.jpg"> и <img width=13 height=23 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img380.jpg"> определены своими декартовыми прямоугольными координатами:</p>
-<p><img width=100 height=56 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img381.jpg"></p>
-<p>Умножим векторно <img width=13 height=24 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img382.jpg"> на <img width=13 height=24 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img383.jpg">, используя алгебраические свойства 2, 3 векторного произведения. Получим</p>
-<p><img width=491 height=25 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img384.jpg"></p>
-<p><img width=459 height=25 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img385.jpg">.</p>
+    Пусть два вектора \(\vec{a}\) и \(\vec{b}\) определены своими декартовыми прямоугольными координатами:</p>
+<p>$$\vec{a}=(x_1,y_1,z_1),$$</p>
+<p>$$\vec{b}=(x_2,y_2,z_2),$$</p>
+<p>Умножим векторно \(\vec{a}\) на \(\vec{b}\), используя алгебраические свойства 2, 3 векторного произведения. Получим</p>
+<p>$$\vec{a}\times\vec{b}=\Big(x_1\vec{i}+y_1\vec{j}+z_1\vec{k}\Big)\times\Big(x_2\vec{i}+y_2\vec{j}+z_2\vec{k}\Big)=x_1x_2\Big(\vec{i}\times\vec{i}\Big)+x_1x_2\Big(\vec{i}\times\vec{j}\Big)+x_1z_2\Big(\vec{i}\times\vec{k}\Big)+$$</p>
+<p>$$+y_1y_2\Big(\vec{j}\times\vec{i}\Big)+y_1y_2\Big(\vec{j}\times\vec{j}\Big)+y_1y_2\Big(\vec{j}\times\vec{k}\Big)+z_1x_2\Big(\vec{k}\times\vec{i}\Big)+z_1y_2\Big(\vec{k}\times\vec{j}\Big)+z_1z_2\Big(\vec{k}\times\vec{k}\Big).$$</p>
 <p>Составим таблицу векторного умножения базисных векторов:</p>
-<p><img width=248 height=89 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img386.jpg"></p>
+<p>$$\begin{cases}\vec{i}\times\vec{i}=\vec{0}\\\vec{i}\times\vec{j}=\vec{k}\\\vec{i}\times\vec{k}=\vec{j},\end{cases} \;\;\;\begin{cases}\vec{j}\times\vec{i}=-\vec{k}\\\vec{j}\times\vec{j}=\vec{0}\\\vec{j}\times\vec{k}=\vec{i},\end{cases}\;\;\; \begin{cases}\vec{k}\times\vec{i}=\vec{j}\\\vec{k}\times\vec{j}=-\vec{i}\\\vec{k}\times\vec{k}=\vec{0}.\end{cases}$$</p>
 <p>С учетом таблицы умножения получается</p>
-<p><img width=344 height=28 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img387.jpg"></p>
-<p>или</p>
-<p><img width=275 height=28 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img388.jpg"></p>
+<p>$$\vec{a}\times\vec{b}=\Big(y_1z_2-z_1y_2\Big)\vec{i}+\Big(z_1x_2-z_2x_1\Big)\vec{j}+\Big(x_1y_2-x_2y_1\Big)\vec{k},$$
+	или</p>
+<p>$$\vec{a}\times\vec{b}=\Big(y_1z_2-z_1y_2,z_1x_2-z_2x_1,x_1y_2-x_2y_1\Big).$$</p>
 <p>Для запоминания этой формулы удобно использовать символический определитель 3-го порядка:</p>
-<p><img width=133 height=80 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img389.jpg"></p>
+<p>$$\vec{a}\times\vec{b}=\begin{vmatrix}\vec{i} & \vec{j} & \vec{k} \\x_1 & y_2 & z_1\\x_2 & y_2 & z_2 \end{vmatrix}. $$</p>
 <p>Действительно, раскрывая его по 1-й строке, мы получим выражение, эквивалентное найденному выше.</p>
 <p>
-    <strong>Пример 3.</strong> Пусть <img width=13 height=23 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img390.jpg"> = (1, 0, 2), <img width=13 height=23 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img391.jpg"> = (0, &#8211; 1, 1). Тогда</p>
-<p><img width=324 height=80 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img392.jpg"></p>
-<p><img width=161 height=25 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img393.jpg">.&#9679;</p>
-<p>
-    Пусть векторы <img width=40 height=25 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img394.jpg"> заданы своими прямоугольными декартовыми координатами:</p>
-<p><img width=304 height=28 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img395.jpg"></p>
-<p>Вычислим координаты смешанного произведения <img width=32 height=25 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img396.jpg">:</p>
-<p><img width=421 height=25 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img397.jpg"></p>
-<p><img width=324 height=23 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img398.jpg">.</p>
+    <i>Пример 3.</i> Пусть \(\vec{a}= (1, 0, 2),\)  \(\vec{b}= (0, -1, 1)\). Тогда</p>
+<p>$$\vec{a}\times\vec{b}=\begin{vmatrix}\vec{i} & \vec{j} & \vec{k} \\1 & 0 & 2\\0 & -1 & 1 \end{vmatrix}=2\vec{i}-\vec{j}-\vec{k}=(2, -1, -1).&#9679;$$</p>
+<p>Пусть векторы \(\vec{a},\vec{b},\vec{c}\) заданы своими прямоугольными декартовыми координатами:</p>
+<p>$$\vec{a}=(x_1,y_1,z_1),\;\; \vec{b}=(x_2,y_2,z_2),\;\;\vec{c}=(x_3,y_3,z_3).$$</p>
+<p>Вычислим координаты смешанного произведения \(\vec{a}\vec{b}\vec{c}:\)</p>
+<p>$$\vec{a}\vec{b}\vec{c}=\Big(\vec{a}\times\vec{b}\Big)\vec{c}=(y_1z_2-y_2z_1,z_1x_2-z_2x_1,x_1y_2-x_2y_1)(x_3,y_3,z_3)=$$</p>
+<p>$$=x_3(y_1z_2-y_2z_1)+y_3(z_1x_2-z_2x_1)+z_3(x_1y_2-x_2y_1).$$</p>
 <p>Или, используя определители 2-го порядка, можно записать</p>
-<p><img width=271 height=51 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img399.jpg"></p>
+<p>$$\vec{a}\vec{b}\vec{c}=x_3\begin{vmatrix}y_1 & z_1\\y_2 & z_2\end{vmatrix}-y_3\begin{vmatrix}x_1 & z_1\\x_2 & z_2\end{vmatrix}+z_3\begin{vmatrix}x_1 & y_1\\x_2 & y_2\end{vmatrix}.$$</p>
 <p>Но данное выражение является разложением по 3-й строке определителя 3-го порядка:</p>
-<p><img width=313 height=75 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img400.jpg">.</p>
-<p>Таким образом, <img width=123 height=75 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img401.jpg">.</p>
+<p>$$\begin{vmatrix}x_1 & y_1 & z_1\\x_2 & y_2 & z_2 \\x_3 & y_3 & z_3 \end{vmatrix}=x_3\begin{vmatrix}y_1 & z_1\\y_2 & z_2\end{vmatrix}-y_3\begin{vmatrix}x_1 & z_1\\x_2 & z_2\end{vmatrix}+z_3\begin{vmatrix}x_1 & y_1\\x_2 & y_2\end{vmatrix}.$$</p>
+<p>Таким образом, \(\vec{a}\vec{b}\vec{c}=\begin{vmatrix}x_1 & y_1 & z_1\\x_2 & y_2 & z_2 \\x_3 & y_3 & z_3 \end{vmatrix}.\)</p>
 <p>&nbsp;</p>
-<h4>2.7. Двойное векторное произведение векторов</h4>
-<p><strong>Определение 2.17.</strong> Выражения <img width=65 height=32 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img402.jpg"> и <img width=65 height=32 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img403.jpg"> называют двойными векторными произведениями.</p>
+<h4 align="center">&sect;2.7. Двойное векторное произведение векторов</h4>
+<p><strong>Определение 2.17.</strong> Выражения \(\Big(\vec{a}\times\vec{b}\Big)\times\vec{c}\;\;\)   и   \(\;\;\vec{a}\times\Big(\vec{b}\times\vec{c}\Big)\) называют двойными векторными произведениями.</p>
 <p>Вычислять двойное векторное произведение можно, последовательно выполняя операции векторного умножения с соблюдением их порядка. Следует при этом помнить, что векторное умножение не обладает свойством ассоциативности, т. е.</p>
-<p><img width=147 height=32 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img404.jpg"></p>
-<p><strong>Упражнение.</strong> Привести пример нарушения свойства ассоциативности.</p>
+<p>$$\Big(\vec{a}\times\vec{b}\Big)\times\vec{c}\neq\vec{a}\times\Big(\vec{b}\times\vec{c}\Big).$$</p>
+<p><i>Упражнение.</i> Привести пример нарушения свойства ассоциативности.</p>
 <p>Облегчить вычисление двойного векторного произведения можно с помощью формулы сокращенного умножения</p>
-<p><img width=171 height=32 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img405.jpg"><img width=28 height=25 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img406.jpg">, (2.2)</p>
-<p>которая дает разложение двойного векторного произведения по векторам <img width=19 height=25 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img407.jpg"> и <img width=13 height=23 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img408.jpg">. Коэффициентами разложения здесь служат скалярные произведения <img width=21 height=23 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img409.jpg"> и <img width=20 height=23 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img410.jpg">.</p>
-<p>Тогда выражение <img width=65 height=32 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img411.jpg"> можно вычислить по формуле</p>
-<p><img width=155 height=25 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img412.jpg">.</p>
+<table style="width:100%"> <tr> <td style="width:20%"></td> <td style="width:60%">
+<p>$$\Big(\vec{a}\times\vec{b}\Big)\times\vec{c}=\vec{b}\Big(\vec{a}\vec{c}\Big)-\vec{a}\Big(\vec{b}\vec{c}\Big)\Big(\vec{b}\vec{c}\Big),$$
+	</td><td align="right">(2.2)</td></tr></table>
+	которая дает разложение двойного векторного произведения по векторам \(\vec{a}\) и \(\vec{b}\). Коэффициентами разложения здесь служат скалярные произведения \(\vec{a}\vec{c}\) и \(\vec{b}\vec{c}\).</p>
+<p>Тогда выражение \(\vec{a}\times\Big(\vec{b}\times\vec{c}\Big)\) можно вычислить по формуле</p>
+<p>$$\vec{a}\times\Big(\vec{b}\times\vec{c}\Big)=\vec{b}\Big(\vec{a}\vec{c}\Big)-\vec{c}\Big(\vec{a}\vec{b}\Big).$$</p>
 <p>Докажем формулу сокращенного умножения (2.2).</p>
-<p>Выберем прямоугольную декартову систему координат так, чтобы вектор <img width=13 height=24 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img413.jpg"> лежал на оси Ох, а вектор <img width=15 height=23 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img414.jpg"> &#8211; в плоскости Оху. Тогда</p>
-<p><img width=288 height=28 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img415.jpg"></p>
+<p>Выберем прямоугольную декартову систему координат так, чтобы вектор \(\vec{a}\) лежал на оси <i>Ох</i>, а вектор \(\vec{b}\) &#8211; в плоскости <i>Оху</i>. Тогда</p>
+<p>$$\vec{a}=(x_1,0,0),\;\; \vec{b}=(x_2,y_2,0),\;\; \vec{c}=(x_3,y_3,z_3). $$</p>
 <p>Вычислим правую и левую части соотношения (2.2) и убедимся в их равенстве.</p>
-<p><img width=209 height=80 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img416.jpg">,</p>
-<p><img width=308 height=80 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img417.jpg">.</p>
+<p>$$\vec{a}\times\vec{b}=\begin{vmatrix}\vec{i} & \vec{j} & \vec{k}\\x_1 & 0 & 0 \\x_2 & y_2 & 0 \end{vmatrix}=(0,0,x_1y_2), $$</p>
+<p>$$\Big(\vec{a}\times\vec{b}\Big)\times\vec{c}=\begin{vmatrix}\vec{i} & \vec{j} & \vec{k}\\0 & 0 & x_1y_2 \\x_3 & y_3 & z_3 \end{vmatrix}=(-x_1y_2y_3,x_1x_2y_2,0). $$</p>
 <p>С другой стороны,</p>
-<p><img width=268 height=25 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img418.jpg">,</p>
-<p><img width=337 height=25 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img419.jpg"> &rArr;</p>
-<p>&rArr; <img width=221 height=25 alt="" style="padding : 1px;" src="../../images/lk2/theory partI chapter1/img420.jpg">.</p>
+<p>$$\vec{b}\Big(\vec{a}\vec{c}\Big)=(x_2,y_2,0)x_1x_3=(x_1x_2x_3,x_1y_2x_3,0), $$</p>
+<p>$$\vec{a}\Big(\vec{b}\vec{c}\Big)=(x_1,0,0)(x_2x_3+y_2y_3)=(x_1x_2x_3+x_1y_2y_3,0,0)\Rightarrow $$</p>
+<p>$$\Rightarrow \vec{b}\Big(\vec{a}\vec{c}\Big)-\vec{a}\Big(\vec{b}\vec{c}\Big)=(-x_1y_2y_3,x_1y_2x_3,0). $$</p>
 
 </div>
 
